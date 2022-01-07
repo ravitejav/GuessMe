@@ -1,8 +1,8 @@
 {
-  "name": "scribble-game",
+  "name": "guessme-game",
   "version": "0.0.1",
   "private": true,
-  "homepage": "http://ravitejav.github.io/ScribbleGame",
+  "homepage": "http://ravitejav.github.io/GuessMe",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
