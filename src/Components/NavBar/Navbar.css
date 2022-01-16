@@ -1,0 +1,11 @@
+.navBarContainer {
+    padding: 1rem;
+}
+.navBarContainer .navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.navBarContainer .navbar .heading {
+    font-size: 2rem;
+    font-weight: 300;
+}
