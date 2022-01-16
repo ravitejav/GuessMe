@@ -26,7 +26,7 @@ const HomePage = () => {
 
   const handleSignUp = async (e: React.FormEvent<HTMLFormElement> | any) => {
     e.preventDefault();
-    const results = await makeRequest(REGISTER_USER, HTTP_METHODS.POST, '', extractFormData(e.target as HTMLFormElement));
+    await makeRequest(REGISTER_USER, HTTP_METHODS.POST, '', extractFormData(e.target as HTMLFormElement));
     changeOp();
     setToaster({
       message: "Successfully registered. Please login to continue",
