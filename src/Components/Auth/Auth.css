@@ -1,0 +1,37 @@
+.AuthForm {
+  display: flex;
+  flex-direction: column;
+}
+.AuthForm form {
+  display: flex;
+  flex-direction: column;
+}
+.AuthForm form input {
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--black-color);
+  color: var(--blue-color);
+  outline: none;
+  height: 2rem;
+  width: 15rem;
+}
+.AuthForm form button {
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    align-self: center;
+    margin-top: 2rem;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border-radius: 1rem;
+
+}
+.AuthForm .changeOperation {
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+}
+.AuthForm .changeOperation span {
+    cursor: pointer;
+    color: var(--blue-color);
+}
