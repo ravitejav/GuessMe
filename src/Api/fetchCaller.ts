@@ -6,7 +6,7 @@ export const makeRequest = async (url: string, method: string, token: string, bo
     }
 
     const options: RequestInit = {
-        method: 'post',
+        method,
         headers
     }
 
@@ -14,9 +14,7 @@ export const makeRequest = async (url: string, method: string, token: string, bo
         options.body = JSON.stringify(body)
     }
 
-    const results = await fetch(url, options)
-        .then(res => res.json())
-        .catch(err => console.log(err))
+    const results = await fetch(url, options);
 
-    return results;
+    return await results.json();
 }

@@ -17,8 +17,7 @@ const App = () => {
             <Route path="/GuessMe/game" element={<GameCreation />} />
           </Routes>
         </BrowserRouter>,
-          
-          <Toaster />
+        <Toaster />
         </RecoilRoot>
       </ErrorBoundary>
     </>

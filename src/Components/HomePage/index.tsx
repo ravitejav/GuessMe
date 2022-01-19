@@ -32,7 +32,7 @@ const HomePage = () => {
       message: "Successfully registered. Please login to continue",
       show: true,
       type: 'success'
-    })
+    });
     e.target.reset();
   }
 
