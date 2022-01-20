@@ -1,0 +1,29 @@
+.gameCreationContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bgcolor);
+    color: var(--white-color);
+    min-height: 100vh;
+}
+
+.gameCreationContainer .createRoomContainer {
+    padding: 1rem;
+    margin-left: 13%;
+}
+.gameCreationContainer .createRoomContainer button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--white-color);
+    color: var(--blue-color);
+}
+
+.gameCreationContainer .availableRooms {
+    display: flex;
+    justify-content: space-around;
+}
+.gameCreationContainer .availableRooms > div {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--white-color);
+    color: var(--blue-color);
+}

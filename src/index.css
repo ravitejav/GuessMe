@@ -3,6 +3,7 @@
   --black-color: #000;
   --blue-color: #001f3f;
   --lime-green-color: #32cd32;
+  --main-bgcolor: #0051a1;
 }
 
 * {
@@ -15,4 +16,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button {
+  cursor: pointer;
 }

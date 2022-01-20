@@ -6,7 +6,7 @@ export const makeRequest = async (url: string, method: string, token: string, bo
     }
 
     const options: RequestInit = {
-        method: 'post',
+        method,
         headers
     }
 

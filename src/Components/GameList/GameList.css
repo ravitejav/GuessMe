@@ -1,0 +1,41 @@
+.gameListContainers {
+    border-radius: 0.5rem;
+    max-height: 450px;
+    overflow-y: scroll;
+}
+.gameListContainers > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+.gameListContainers > ul > li {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--blue-color);
+    margin-top: 0.5rem;
+    background-color: #fff;
+}
+.gameListContainers > ul > li:last-child {
+    border-bottom: none;
+}
+.gameListContainers > ul > li > p {
+    padding: 0.1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+.gameListContainers > ul > li > p > span {
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+.gameListContainers > ul > li {
+    display: flex;
+    justify-content: space-around;
+}
+.gameListContainers > ul > li > button  {
+    background-color: var(--main-bgcolor);
+    color: var(--white-color);
+    padding: 0.5rem 0.9rem;
+    border-radius: 1rem;
+}
