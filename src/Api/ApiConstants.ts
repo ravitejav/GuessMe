@@ -26,6 +26,8 @@ export const HTTP_STATUS_CODES = {
   INTERNAL_SERVER_ERROR: 500,
 };
 
+export const createRoomElements = [];
+
 export const loginElements = ["username", "password"];
 
 export const signupElements = ["name", "username", "password", "emailId"];
