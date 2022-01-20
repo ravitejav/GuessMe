@@ -10,10 +10,9 @@ export const Toaster = () => {
     
     useEffect(() => {
         if(toaster.show) {
-            setTimeout(() => setToasterDetails(TOASTER_DEFAULT_VALUE), 1000);
+            setTimeout(() => setToasterDetails(TOASTER_DEFAULT_VALUE), 3000);
         }
-        return () => setToasterDetails(TOASTER_DEFAULT_VALUE);
-    }, [setToasterDetails, toaster.show]);
+    }, [setToasterDetails, toaster]);
 
     return toaster.show  ? (
         <div className="toasterContainer">
