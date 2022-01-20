@@ -1,10 +1,10 @@
 import { isDevEnv } from "../helpers/ApiHelpers";
 
-const BASE_URL = isDevEnv() ? '/' : '/';
-const USER_URL = BASE_URL + 'user/';
+const BASE_URL = isDevEnv() ? "/" : "/";
+const USER_URL = BASE_URL + "user/";
 
 /* uses the user services */
-export const GET_USERNAME = USER_URL + 'getUserDetails/{username}';
+export const GET_USERNAME = USER_URL + 'getUserDetails/';
 export const REGISTER_USER = USER_URL + 'createUser';
 export const AUTHORIZE_USER = USER_URL + 'auth';
 
@@ -17,23 +17,25 @@ export const GET_CREATED_ROOM_BY_USER = ROOM_URL + 'getRoomByUser/';
 
 
 export const HTTP_METHODS = {
-    GET: 'get',
-    POST: 'post',
-    PUT: 'put',
-    DELETE: 'delete',
+  GET: "get",
+  POST: "post",
+  PUT: "put",
+  DELETE: "delete",
 };
 
 export const HTTP_STATUS_CODES = {
-    OK: 200,
-    CREATED: 201,
-    NO_CONTENT: 204,
-    BAD_REQUEST: 400,
-    UNAUTHORIZED: 401,
-    FORBIDDEN: 403,
-    NOT_FOUND: 404,
-    INTERNAL_SERVER_ERROR: 500,
+  OK: 200,
+  CREATED: 201,
+  NO_CONTENT: 204,
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500,
 };
+
+export const createRoomElements = [];
 
 export const loginElements = ["username", "password"];
 
-export const signupElements = ["name", "username", "password", "email"];
+export const signupElements = ["name", "username", "password", "emailId"];
