@@ -4,6 +4,7 @@
 .navBarContainer .navbar {
     display: flex;
     justify-content: space-between;
+    list-style: none;
 }
 .navBarContainer .navbar .heading {
     font-size: 2rem;

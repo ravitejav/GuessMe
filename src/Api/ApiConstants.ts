@@ -3,10 +3,18 @@ import { isDevEnv } from "../helpers/ApiHelpers";
 const BASE_URL = isDevEnv() ? "/" : "/";
 const USER_URL = BASE_URL + "user/";
 
-/* uses the user service micro service */
-export const GET_USERNAME = USER_URL + "getUserDetails/";
-export const REGISTER_USER = USER_URL + "createUser";
-export const AUTHORIZE_USER = USER_URL + "auth";
+/* uses the user services */
+export const GET_USERNAME = USER_URL + 'getUserDetails/';
+export const REGISTER_USER = USER_URL + 'createUser';
+export const AUTHORIZE_USER = USER_URL + 'auth';
+
+const ROOM_URL = BASE_URL + 'room/';
+
+/* uses the room services */
+export const GET_ELIGIBLE_ROOMS = ROOM_URL + 'elgibleRooms/';
+export const GET_CREATED_ROOM_BY_USER = ROOM_URL + 'getRoomByUser/';
+
+
 
 export const HTTP_METHODS = {
   GET: "get",
