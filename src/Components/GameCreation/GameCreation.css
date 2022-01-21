@@ -1,0 +1,43 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.button {
+  padding: 2px;
+}
+
+.RoomForm {
+  display: flex;
+  flex-direction: column;
+}
+.RoomForm form {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+}
+.RoomForm form input {
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--black-color);
+  color: var(--blue-color);
+  outline: none;
+  height: 2rem;
+  width: 15rem;
+  margin: 5px;
+}
+.users {
+  margin: 20px;
+}
+.RoomForm form button {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  align-self: center;
+  margin-top: 2rem;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border-radius: 1rem;
+}
