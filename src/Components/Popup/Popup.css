@@ -1,0 +1,89 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.button {
+  padding: 2px;
+}
+
+.RoomForm {
+  display: flex;
+  flex-direction: column;
+}
+.RoomForm form {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+}
+.RoomForm form input {
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--black-color);
+  color: white;
+  outline: none;
+  height: 2rem;
+  width: 15rem;
+  margin: 5px;
+}
+
+.users {
+  margin: 20px;
+}
+.RoomForm form button {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  align-self: center;
+  margin-top: 2rem;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border-radius: 1rem;
+}
+
+btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #2b76c0;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+::placeholder {
+  color: wheat;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}

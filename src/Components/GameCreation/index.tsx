@@ -1,42 +1,35 @@
 import { useState } from "react";
+import {
+  CREATED_BY_ME_ROOMS,
+  ELIGIBLE_ROOM,
+} from "../../Constants/RoomConstants";
+import { GameList } from "../GameList/GameList";
+import { NavBar } from "../NavBar";
 import "./GameCreation.css";
-import "../Modal/Modal.css";
+import { Popup } from "../Popup/Popup";
 
 const GameCreation = () => {
-  const [togglePopup, setTogglePopup] = useState(false);
+  const [toggleRoomFlag, setToggleRoomFlag] = useState(false);
+  const handleRoomCreation = () => setToggleRoomFlag(!toggleRoomFlag);
 
-  const toggleModal = () => {
-    setTogglePopup(!togglePopup);
-  };
   return (
-    <div className="btn-container">
-      <button className="btn-overlay" onClick={toggleModal}>
-        Create Room
-      </button>
-
-      {/* CREATE ROOM POPUP */}
-      {togglePopup && (
-        <div className="modal">
-          <div className="overlay" onClick={toggleModal}></div>
-          <div className="modal-content">
-            <h2>Create Room</h2>
-            <div className="RoomForm">
-              <form onSubmit={() => {}}>
-                <input type="text" placeholder="Room Name..." name="roomname" />
-                <input type="text" placeholder="Search Users..." name="users" />
-                <div className="users">
-                  <p>Adding Users here...</p>
-                </div>
-                <button type="submit">Create Room</button>
-              </form>
-            </div>
-            <button className="close-modal" onClick={toggleModal}>
-              X
-            </button>
-          </div>
+    <section className="gameCreationContainer">
+      <NavBar />
+      <div className="createRoomContainer">
+        <button className="button" onClick={handleRoomCreation}>
+          Create Room
+        </button>
+      </div>
+      <div className="availableRooms">
+        <div>
+          <GameList listType={CREATED_BY_ME_ROOMS} />
         </div>
-      )}
-    </div>
+        <div>
+          <GameList listType={ELIGIBLE_ROOM} />
+        </div>
+      </div>
+      {toggleRoomFlag && <Popup toggleFunc={handleRoomCreation} />}
+    </section>
   );
 };
 
