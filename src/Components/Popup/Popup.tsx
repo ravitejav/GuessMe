@@ -22,7 +22,7 @@ export const Popup = (toggle: Toggler) => {
           </form>
         </div>
         <button className="close-modal" onClick={toggle.toggleFunc}>
-          X
+          &times;
         </button>
       </div>
     </div>

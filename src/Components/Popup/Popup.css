@@ -78,12 +78,14 @@ btn-modal {
 }
 
 ::placeholder {
-  color: wheat;
+  color: white;
 }
 
 .close-modal {
   position: absolute;
+  border-radius: 50%;
   top: 10px;
   right: 10px;
+  font-size: 1rem;
   padding: 5px 7px;
 }
