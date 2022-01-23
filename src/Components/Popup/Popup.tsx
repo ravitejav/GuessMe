@@ -67,11 +67,13 @@ export const Popup = (toggle: Toggler) => {
     );
 
     //VALIDATION TO BE DONE!!!! when room is not created!!!
-    setToaster({
-      message: `"${requests.roomname}" has been created`,
-      show: true,
-      type: "SUCCESS",
-    });
+    if (response) {
+      setToaster({
+        message: `"${requests.roomname}" has been created`,
+        show: true,
+        type: "SUCCESS",
+      });
+    }
   };
 
   return (
