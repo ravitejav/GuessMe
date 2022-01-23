@@ -30,8 +30,15 @@ const HomePage = () => {
       "",
       extractFormData(e.target as HTMLFormElement)
     );
-    setJwtToken(results.jwt);
-
+    if (results) {
+      setJwtToken(results.jwt);
+      setLoggedUser({
+        userId: results.user?.userId,
+        name: results.user?.name,
+        username: results.user?.username,
+        emailId: results.user?.emailId,
+      });
+    }
     e.target.reset();
     navigation("/guessMe/game");
   };

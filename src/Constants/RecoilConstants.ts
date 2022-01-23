@@ -7,7 +7,7 @@ export const TOASTER_DEFAULT_VALUE = {
 };
 
 export const USER_DEFAULT_VALUE = {
-  userId: "",
+  userId: null,
   name: "",
   username: "",
   emailId: "",
