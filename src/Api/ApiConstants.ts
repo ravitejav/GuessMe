@@ -14,6 +14,7 @@ const ROOM_URL = BASE_URL + "room/";
 /* uses the room services */
 export const GET_ELIGIBLE_ROOMS = ROOM_URL + "elgibleRooms/";
 export const GET_CREATED_ROOM_BY_USER = ROOM_URL + "getRoomByUser/";
+export const CREATE_ROOM = ROOM_URL + "saveRoom";
 
 export const HTTP_METHODS = {
   GET: "get",
