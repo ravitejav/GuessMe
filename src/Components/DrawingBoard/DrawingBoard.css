@@ -1,0 +1,12 @@
+.drawingBoardHolder {
+    display: flex;
+    flex-direction: column;   
+    height: 100%;
+}
+.drawingBoardHolder .canvasHolder {
+    flex: 21;
+    margin-bottom: 0.3rem;
+}
+.drawingBoardHolder .drawingOptions {
+    flex: 3;
+}
