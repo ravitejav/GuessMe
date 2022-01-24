@@ -11,8 +11,13 @@ export const jwtToken = atom({
 });
 
 export const toasterDetails = atom({
-  key: "toasterData",
-  default: TOASTER_DEFAULT_VALUE,
+    key: 'toasterData',
+    default: TOASTER_DEFAULT_VALUE,
+});
+
+export const demo = atom({
+    key: 'demo',
+    default: false,
 });
 
 export const loggedInUserState = atom({

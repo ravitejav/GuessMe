@@ -7,6 +7,7 @@ import { Toaster } from "./Components/Toaster";
 import { jwtToken } from "./Recoil";
 import "./App.css";
 import { Spinner } from "./Components/Spinner";
+import { GameRoom } from "./Components/GameRoom";
 
 const HomePage = React.lazy(() => import("./Components/HomePage"));
 const GameCreation = React.lazy(() => import("./Components/GameCreation"));
@@ -24,6 +25,11 @@ const App = () => {
               {jwttoken && (
                 <Route path="/GuessMe/game" element={<GameCreation />} />
               )}
+              {jwttoken && (
+                <Route path="/GuessMe/game/:roomId" element={<GameRoom />} />
+              )}
+
+              
               <Route path="*" element={<Navigate replace to="/GuessMe/" />} />
             </Routes>
           </BrowserRouter>
