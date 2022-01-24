@@ -9,7 +9,7 @@ import {
 } from "../../Api/ApiConstants";
 import { makeRequest } from "../../Api/fetchCaller";
 import { extractFormData } from "../../Api/FormHelper";
-import { jwtToken, toasterDetails } from "../../Recoil";
+import { jwtToken, toasterDetails, loggedInUserState } from "../../Recoil";
 import { Auth } from "../Auth";
 import { NavBar } from "../NavBar";
 import "./homePage.css";
@@ -18,6 +18,7 @@ const HomePage = () => {
   const [loginState, setLoginState] = useState(true);
   const [, setJwtToken] = useRecoilState(jwtToken);
   const [, setToaster] = useRecoilState(toasterDetails);
+  const [, setLoggedUser] = useRecoilState(loggedInUserState);
   const navigation = useNavigate();
   const [isUserValid, setUserValid] = useState(false);
 
@@ -29,7 +30,15 @@ const HomePage = () => {
       "",
       extractFormData(e.target as HTMLFormElement)
     );
-    setJwtToken(results.jwt);
+    if (results) {
+      setJwtToken(results.jwt);
+      setLoggedUser({
+        userId: results.user?.userId,
+        name: results.user?.name,
+        username: results.user?.username,
+        emailId: results.user?.emailId,
+      });
+    }
     e.target.reset();
     navigation("/guessMe/game");
   };

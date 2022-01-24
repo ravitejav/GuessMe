@@ -37,7 +37,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "prepare": "husky install",
-    "lint": "eslint src/**/*.js src/**/*.tsx"
+    "lint": "eslint src/**/*.js src/**/*.tsx --fix"
   },
   "eslintConfig": {
     "extends": [
