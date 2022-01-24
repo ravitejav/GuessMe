@@ -16,6 +16,17 @@ export const GET_ELIGIBLE_ROOMS = ROOM_URL + "elgibleRooms/";
 export const GET_CREATED_ROOM_BY_USER = ROOM_URL + "getRoomByUser/";
 export const CREATE_ROOM = ROOM_URL + "saveRoom";
 
+
+/* websocket constant URLs */
+export const SUBMIT_IMAGE_UPDATES = (roomId: string) => `/app/room/${roomId}/imageUpdates`; 
+export const SUBMIT_MESSAGE_UPDATES = (roomId: string) => `/app/room/${roomId}/messageUpdates`; 
+
+
+/* uses the room services */
+export const TOPIC_IMAGE_UPDATES = (roomId: string) => `/topic/room/${roomId}/imageUpdates`;
+export const TOPIC_MESSAGE_UPDATES = (roomId: string) => `/topic/room/${roomId}/messageUpdates`;
+export const TOPIC_SCORE_UPDATES = (roomId: string) => `/topic/room/${roomId}/scoreUpdates`;
+
 export const HTTP_METHODS = {
   GET: "get",
   POST: "post",

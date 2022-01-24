@@ -7,6 +7,7 @@ import { DrawingOption } from "./DrawingOption";
 import "./DrawingBoard.css";
 import { useRecoilState } from "recoil";
 import { loggedInUserState } from "../../Recoil";
+import { SUBMIT_IMAGE_UPDATES } from "../../Api/ApiConstants";
 
 export const DrawingBoard = (drawingBoardProps: DrawingBoardProp) => {
   const [color, setColor] = useState("#000000");
@@ -20,7 +21,7 @@ export const DrawingBoard = (drawingBoardProps: DrawingBoardProp) => {
     if (user.userId !== 1) return;
     drawingBoardProps.currentConnection &&
       drawingBoardProps.currentConnection.send(
-        `/app/room/${drawingBoardProps.roomId}/imageUpdates`,
+        SUBMIT_IMAGE_UPDATES(drawingBoardProps.roomId),
         {},
         JSON.stringify({ updatedPaths: updatedPaths[updatedPaths.length - 1] })
       );

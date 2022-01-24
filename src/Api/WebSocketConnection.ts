@@ -1,4 +1,5 @@
 import Stomp, { Client } from "stompjs";
+import { TOPIC_IMAGE_UPDATES, TOPIC_MESSAGE_UPDATES, TOPIC_SCORE_UPDATES } from "./ApiConstants";
 
 export const stompConnection = (
   roomId: any,
@@ -10,9 +11,9 @@ export const stompConnection = (
   const socket = new WebSocket("ws://localhost:9001/roomUpdates");
   const stomp: Client = Stomp.over(socket);
   stomp.connect({}, (frame) => {
-    stomp.subscribe(`/topic/room/${roomId}/imageUpdates`, imageUpdates);
-    stomp.subscribe(`/topic/room/${roomId}/messageUpdates`, messageUpdates);
-    stomp.subscribe(`/topic/room/${roomId}/scoreUpdates`, scoreUpdates);
+    stomp.subscribe(TOPIC_IMAGE_UPDATES(roomId), imageUpdates);
+    stomp.subscribe(TOPIC_MESSAGE_UPDATES(roomId), messageUpdates);
+    stomp.subscribe(TOPIC_SCORE_UPDATES(roomId), scoreUpdates);
     sendStompInstance(stomp);
   });
 };
