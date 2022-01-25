@@ -36,6 +36,7 @@ const HomePage = () => {
         userId: results.user?.userId,
         name: results.user?.name,
         username: results.user?.username,
+        password: "",
         emailId: results.user?.emailId,
       });
     }
