@@ -20,6 +20,7 @@ export const CREATE_ROOM = ROOM_URL + "saveRoom";
 /* websocket constant URLs */
 export const SUBMIT_IMAGE_UPDATES = (roomId: string) => `/app/room/${roomId}/imageUpdates`; 
 export const SUBMIT_MESSAGE_UPDATES = (roomId: string) => `/app/room/${roomId}/messageUpdates`; 
+export const SUBMIT_USER_UPDATES = (roomId: string) => `/app/room/${roomId}/scoreUpdates`; 
 
 
 /* uses the room services */

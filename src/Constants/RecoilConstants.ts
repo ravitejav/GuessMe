@@ -10,5 +10,6 @@ export const USER_DEFAULT_VALUE = {
   userId: null,
   name: "",
   username: "",
+  password: "",
   emailId: "",
 };

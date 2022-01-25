@@ -1,0 +1,44 @@
+.user-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  height: 15%;
+  width: 98%;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  color: #000;
+  background-color: #ebebeb;
+  margin: 0.24rem;
+  /* box-shadow: 4px 6px 7px 1px rgba(0, 0, 0, 0.76); */
+}
+
+.rank {
+  font-size: 1.8rem;
+}
+
+.name-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -12px 0 -12px -12px;
+}
+
+.name {
+  font-size: 1.2rem;
+  margin: -12px 0;
+}
+
+.points {
+  margin: -18px 0;
+}
+
+.user-chip img {
+  float: right;
+  margin: 0 -20px 0 -25px;
+  background-color: white;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+}
