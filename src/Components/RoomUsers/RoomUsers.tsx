@@ -52,6 +52,7 @@ function RoomUsers(roomUserProps: RoomUserProps) {
         {},
         JSON.stringify(roomUserList)
       );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomUserList]);
 
   roomUserProps.getNewUser(updateUserList);

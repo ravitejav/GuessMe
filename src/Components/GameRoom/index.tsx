@@ -63,6 +63,7 @@ export const GameRoom = () => {
           );
       }
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomId]);
 
   return (
