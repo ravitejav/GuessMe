@@ -1,0 +1,15 @@
+.drawingOptionContainer {
+    display: flex;
+    height: 100%;
+}
+.drawingOptionContainer .pencils, .drawingOptionContainer .colors {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.drawingOptionContainer .pencils .singlePencil {
+    height: 3rem;
+    width: 3rem;
+    margin: none;
+    border: 1px solid var(--blue-color);
+}

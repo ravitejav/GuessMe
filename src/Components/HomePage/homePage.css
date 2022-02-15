@@ -1,0 +1,27 @@
+.homePageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://lh3.googleusercontent.com/d/14VRWdf6dUR36LjyrNJARQmWvvnAVf-Dh");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--black-color);
+    
+}
+.homePageContainer .AuthContainer {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin-top: 10%;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 2rem;
+}
+.homePageContainer .AuthContainer .loginContainer,
+.homePageContainer .AuthContainer .registerContainer {
+    padding: 3rem;
+}
+.hide {
+    display: none;
+}

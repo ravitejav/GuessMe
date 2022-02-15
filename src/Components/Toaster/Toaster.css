@@ -1,0 +1,11 @@
+.toasterContainer {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border: 1px solid #000;
+  border-radius: 1rem;
+  background-color: var(--lime-green-color);
+  color: var(--blue-color);
+}
